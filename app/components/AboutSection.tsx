@@ -34,30 +34,17 @@ export const AboutSection = () => {
   return (
     <section className="py-12 sm:py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
-        {/* Headers Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-8">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold">About Me</h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="pl-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Professional Journey
-            </h2>
-            {/* <p className="text-gray-400 text-lg">
-              My career progression and key experiences
-            </p> */}
-          </motion.div>
-        </div>
+        {/* Centered About Me Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-5xl md:text-5xl lg:text-5xl font-bold">
+            About Me
+          </h2>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-start">
           {/* About Me Text - Left Side */}
