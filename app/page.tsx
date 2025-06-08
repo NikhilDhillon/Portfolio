@@ -12,7 +12,7 @@ export default function WebDeveloperPortfolio() {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
-      <WebCapabilitiesSection />
+      {/* <WebCapabilitiesSection /> */}
       <ContactSection />
     </main>
   );

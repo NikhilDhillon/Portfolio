@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Nikhil Dhillon - Full Stack Developer",
     description:
       "Passionate Full Stack developer crafting modern and engaging digital experiences. Explore my projects and Full Stack development expertise.",
-    creator: "@yourusername",
+    creator: "@nikhil_dhillon",
     images: ["/og-image.jpg"],
   },
   robots: {

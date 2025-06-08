@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import twGlow from "twglow";
 
 export default {
   content: [
@@ -14,5 +15,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [twGlow],
 } satisfies Config;
