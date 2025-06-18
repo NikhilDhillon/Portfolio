@@ -11,7 +11,7 @@ export const ProjectsSection = () => {
         <div className="space-y-8 sm:space-y-12">
           {[
             {
-              title: "Returnly",
+              title: "Project X",
               description:
                 "A cross-platform full-stack application with a React Native front-end and a Node.js/Express back-end",
               techStack: [
@@ -34,7 +34,7 @@ export const ProjectsSection = () => {
                 "Implemented secure authentication using Passport.js with JWT and OAuth, reducing login failures by 50%",
                 "Engineered real-time driver tracking with GPS, live updates, and route optimization, improving delivery accuracy by 20%",
               ],
-              image: "/Returnly.jpg",
+              image: "/ProjectX.jpg",
             },
             {
               title: "Wearlyze",
