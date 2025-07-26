@@ -9,7 +9,7 @@ export const AboutSection = () => {
       year: "2024",
       title: "Junior Software Developer",
       company: "One Nation",
-      dateRange: "May 2025 - Present",
+      dateRange: "March 2025 - July 2025",
       description: [
         "Built an AI-powered reporting module in Laravel to generate dynamic, natural language-based reports from a PostgreSQL database",
         "Designed and implemented a secure, user-friendly password reset workflow using Filament and Laravel",
