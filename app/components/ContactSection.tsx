@@ -49,7 +49,7 @@ export const ContactSection = () => {
             Get in Touch
           </a>
           <a
-            href="../Nikhil Dhillon Resume X.pdf"
+            href="../Nikhil Dhillon.pdf"
             rel="noopener noreferrer"
             target="_blank"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black border border-gray-800 rounded-lg font-medium hover:bg-gray-900 transition-colors"
