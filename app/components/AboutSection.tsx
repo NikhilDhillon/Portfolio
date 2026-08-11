@@ -3,51 +3,88 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const AboutSection = () => {
-  const experiences = [
-    {
-      year: "2024",
-      title: "Junior Software Developer",
-      company: "One Nation",
-      dateRange: "March 2025 - July 2025",
-      description: [
-        "Built an AI-powered reporting module in Laravel to generate dynamic, natural language-based reports from a PostgreSQL database",
-        "Designed and implemented a secure, user-friendly password reset workflow using Filament and Laravel",
-        "Optimized application performance by asynchronously dispatching intensive tasks via Laravel Jobs and Queues, significantly reducing page response times by 100x",
-      ],
-      technologies: ["PHP", "Laravel", "Filament", "OpenAI", "AWS"],
-    },
-    {
-      year: "2022",
-      title: "Software QA Analyst",
-      company: "Reliable Controls",
-      dateRange: "Sept 2024 - April 2025",
-      description: [
-        "Built end-to-end and regression test frameworks with Playwright, cutting manual testing by 30% and covering 40% of core workflows",
-        "Improved API testing reliability using Postman, reducing validation errors and ensuring spec adherence",
-        "Cut QA review cycle time by 40% and boosted sprint velocity by 15% through test automation and process optimization",
-      ],
-      technologies: ["TestRail", "Postman", "Javascript", "PostgreSQL"],
-    },
-  ];
+const experiences = [
+  {
+    id: "uvic-ta-2026",
+    title: "Incoming Teaching Assistant",
+    company: "University of Victoria",
+    location: "Victoria, BC",
+    dateRange: "September 2026 - December 2026",
+    description: ["Incoming teaching assistant for Database Systems."],
+    technologies: ["Database Systems"],
+  },
+  {
+    id: "reliable-controls-developer-2026",
+    title: "Software Developer Intern",
+    company: "Reliable Controls",
+    location: "Victoria, BC",
+    dateRange: "January 2026 - August 2026",
+    description: [
+      "Reduced MFC GDI resource usage by approximately 75% during a critical workflow, eliminating native Windows resource leaks",
+      "Built a C++/MFC connection-cancellation dialog that lets users immediately abort stalled connection attempts, eliminating 30-60 second timeout waits",
+      "Built a CEF-powered HTML/SVG reporting system that generates high-resolution, print-ready controller I/O visualizations",
+      "Prototyped an XML-to-SQLite configuration migration with Entity Framework Core, including schema migrations and data synchronization",
+    ],
+    technologies: [
+      "C++",
+      "MFC",
+      "CEF",
+      "HTML/SVG",
+      "C#",
+      ".NET",
+      "EF Core",
+      "SQLite",
+    ],
+  },
+  {
+    id: "one-nation-developer-2025",
+    title: "Software Developer (Part-time)",
+    company: "One Nation",
+    location: "Remote (Vancouver, BC)",
+    dateRange: "April 2025 - July 2025",
+    description: [
+      "Built a natural language-driven reporting pipeline with the OpenAI API and PostgreSQL, enabling custom insights in under 20 seconds",
+      "Implemented a Laravel Filament password-reset workflow with token validation, expiration handling, and secure credential updates",
+      "Developed custom WordPress plugins for third-party integrations and performance-tuned, client-specific functionality",
+    ],
+    technologies: [
+      "PHP",
+      "Laravel",
+      "Filament",
+      "OpenAI",
+      "PostgreSQL",
+      "WordPress",
+    ],
+  },
+  {
+    id: "reliable-controls-qa-2024",
+    title: "Software QA Analyst Intern",
+    company: "Reliable Controls",
+    location: "Victoria, BC",
+    dateRange: "September 2024 - April 2025",
+    description: [
+      "Designed and optimized TestRail workflows while validating more than 100 functional and non-functional test cases",
+      "Streamlined API and integration testing with Bruno, reducing API validation errors by 20%",
+      "Reduced QA review-cycle time by 30% through workflow improvements and automation",
+    ],
+    technologies: ["TestRail", "Bruno", "API Testing", "Test Automation"],
+  },
+];
 
+export const AboutSection = () => {
   return (
-    <section className="py-12 sm:py-20 px-4 bg-black">
-      <div className="max-w-7xl mx-auto">
-        {/* Centered About Me Header */}
+    <section className="bg-black px-4 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <h2 className="text-5xl md:text-5xl lg:text-5xl font-bold">
-            About Me
-          </h2>
+          <h2 className="text-5xl font-bold">About Me</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-start">
-          {/* About Me Text - Left Side */}
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-14">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -55,41 +92,34 @@ export const AboutSection = () => {
             className="space-y-6"
           >
             <div className="prose prose-invert max-w-none">
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-bounce inline-block py-1">
+              <p className="mb-6 text-lg leading-relaxed text-gray-300">
+                <span className="inline-block animate-bounce bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text py-1 text-5xl font-bold text-transparent">
                   Hey!
                 </span>{" "}
-                I’m Nikhil Partap Singh Dhillon, a Computer Science Honours
-                student at the University of Victoria with a strong passion for
-                full-stack development and building practical, impactful
-                software. I’m experienced with a wide range of technologies
-                including Laravel, React Native, React.js, Node.js, Express,
-                PostgreSQL, Sequelize, AWS, Redis, Tailwind CSS, and Playwright.
-                I enjoy working on both the frontend and backend, and I’m
-                particularly interested in performance optimization, automation,
-                and integrating AI into real-world applications.
+                I&apos;m Nikhil Partap Singh Dhillon, a Computer Science Honours
+                student at the University of Victoria graduating in April 2027.
+                I build software across native Windows systems, full-stack web
+                applications, mobile products, and backend services.
               </p>
 
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Outside of coding, I’m big on fitness — you’ll often find me at
-                the gym pushing my limits. I also love unwinding with a good TV
-                show or getting lost in side projects that let me experiment
-                with new tools and frameworks. For me, development is as much
-                about creativity and curiosity as it is about problem-solving.
-                I’m always eager to take on new challenges, collaborate with
-                others, and build things that are both fun and functional.
+              <p className="mb-6 text-lg leading-relaxed text-gray-300">
+                My recent work includes improving C++/MFC application
+                performance, building print-ready reporting with CEF and SVG,
+                prototyping .NET data migrations, and developing AI-powered
+                reporting workflows. I&apos;m also building tools that turn complex
+                planning and performance data into clear, useful decisions.
               </p>
 
-              <div className="flex flex-wrap gap-3 mt-8">
+              <div className="mt-8 flex flex-wrap gap-3">
                 {[
-                  "Problem Solving",
-                  "Teamwork",
-                  "Innovation",
-                  "Fitness Enthusiast",
+                  "Systems Development",
+                  "Full-Stack Engineering",
+                  "Performance Optimization",
+                  "Applied AI",
                 ].map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30"
+                    className="rounded-full border border-blue-500/30 bg-blue-500/20 px-4 py-2 text-sm font-medium text-blue-400"
                   >
                     {skill}
                   </span>
@@ -98,7 +128,6 @@ export const AboutSection = () => {
             </div>
           </motion.div>
 
-          {/* Experience Timeline - Right Side */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -106,58 +135,56 @@ export const AboutSection = () => {
             className="relative"
           >
             <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-8 top-2 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-teal-500"></div>
+              <div className="absolute bottom-0 left-8 top-2 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-teal-500" />
 
-              {/* Experience Items */}
               <div className="space-y-8">
-                {experiences.map((exp, index) => (
-                  <motion.div
-                    key={exp.year}
+                {experiences.map((experience, index) => (
+                  <motion.article
+                    key={experience.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                     className="relative pl-20"
                   >
-                    {/* Timeline Dot */}
-                    <div className="absolute left-6 top-2 w-4 h-4 bg-blue-500 rounded-full border-4 border-black shadow-lg"></div>{" "}
-                    {/* Content */}
-                    <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 hover:border-gray-600 transition-all duration-300">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-xl font-semibold text-white">
-                          {exp.title}
-                        </h4>
-                        <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">
-                          {exp.dateRange}
+                    <div className="absolute left-6 top-2 h-4 w-4 rounded-full border-4 border-black bg-blue-500 shadow-lg" />
+
+                    <div className="rounded-lg border border-gray-800 bg-gray-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-gray-600">
+                      <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                        <h3 className="text-xl font-semibold text-white">
+                          {experience.title}
+                        </h3>
+                        <span className="w-fit shrink-0 rounded-full border border-blue-500/30 bg-blue-500/20 px-3 py-1 text-xs font-medium text-blue-400">
+                          {experience.dateRange}
                         </span>
                       </div>
-                      <p className="text-purple-400 font-medium mb-3">
-                        {exp.company}
+                      <p className="font-medium text-purple-400">
+                        {experience.company}
                       </p>
-                      <ul className="text-gray-400 text-sm mb-4 leading-relaxed space-y-1">
-                        {exp.description.map((bullet, bulletIndex) => (
-                          <li
-                            key={bulletIndex}
-                            className="flex items-start gap-2"
-                          >
-                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                      <p className="mb-3 text-sm text-gray-500">
+                        {experience.location}
+                      </p>
+
+                      <ul className="mb-4 space-y-2 text-sm leading-relaxed text-gray-400">
+                        {experience.description.map((bullet) => (
+                          <li key={bullet} className="flex items-start gap-2">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
                             <span>{bullet}</span>
                           </li>
                         ))}
                       </ul>
 
                       <div className="flex flex-wrap gap-2">
-                        {exp.technologies.map((tech) => (
+                        {experience.technologies.map((technology) => (
                           <span
-                            key={tech}
-                            className="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-md text-xs font-medium border border-teal-500/30"
+                            key={technology}
+                            className="rounded-md border border-teal-500/30 bg-teal-500/20 px-3 py-1 text-xs font-medium text-teal-400"
                           >
-                            {tech}
+                            {technology}
                           </span>
                         ))}
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.article>
                 ))}
               </div>
             </div>

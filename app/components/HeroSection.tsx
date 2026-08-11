@@ -4,12 +4,18 @@ export const HeroSection = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Grid */}
-      <div className="absolute inset-0 grid-background opacity-20">
+      <div
+        className="absolute inset-0 grid-background opacity-20"
+        aria-hidden="true"
+      >
         <div className="grid-overlay animate-pulse-slow"></div>
       </div>
 
       {/* Floating Tech Icons */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 hidden overflow-hidden sm:block"
+        aria-hidden="true"
+      >
         {[
           { icon: "⚛️", delay: "0s", position: "top-20 left-1/4" },
           { icon: "🚀", delay: "2s", position: "top-[40%] right-1/3" },
@@ -49,32 +55,33 @@ export const HeroSection = () => {
               <div className="flex items-center gap-3">
                 <span className="h-[1px] w-8 sm:w-12 bg-blue-500"></span>
                 <h2 className="text-xl sm:text-2xl font-light tracking-wide text-blue-400">
-                  Full Stack Developer
+                  Software Developer
                 </h2>
                 <span className="h-[1px] w-8 sm:w-12 bg-blue-500"></span>
               </div>
               <p className="text-base sm:text-lg text-gray-400 max-w-2xl px-4 sm:px-0">
-                Coding the future, one full stack at a time
+                Building reliable systems and practical products across the
+                stack
               </p>
             </div>
 
             {/* Tech Stack Pills */}
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 px-4 sm:px-0">
               {[
-                "Python",
-                "Java",
                 "C++",
-                "PHP",
-                "JavaScript",
-                "React.js",
+                "C#",
+                "Python",
+                "TypeScript",
+                "SQL",
+                "React",
                 "React Native",
                 "Next.js",
-                "Node.js",
-                "Express.js",
-                "Django",
+                "FastAPI",
+                ".NET",
+                "MFC",
                 "PostgreSQL",
+                "Supabase",
                 "Docker",
-                "Git",
                 "AWS",
                 "Microsoft Azure",
               ].map((tech) => (

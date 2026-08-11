@@ -13,40 +13,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nikhil Dhillon - Full Stack Developer",
+  metadataBase: new URL("https://portfolio-nikhil-dhillons-projects.vercel.app"),
+  title: "Nikhil Dhillon - Software Developer",
   description:
-    "Welcome to my portfolio! I am a passionate Full Stack developer creating modern, responsive, and user-friendly applications. Specializing in frontend technologies and interactive user interfaces, I build engaging experiences that make an impact.",
+    "Software developer and University of Victoria Computer Science Honours student building native systems, full-stack products, and data-driven tools.",
   keywords: [
-    "Full Stack Developer",
-    "Frontend Developer",
-    "React Developer",
+    "Software Developer",
+    "Full-Stack Developer",
+    "C++ Developer",
+    "C# Developer",
+    "MFC",
+    ".NET",
+    "React",
+    "React Native",
     "Next.js",
-    "JavaScript",
     "TypeScript",
-    "HTML5",
-    "CSS3",
-    "Responsive Design",
-    "UI/UX",
-    "Web Accessibility",
-    "Performance Optimization",
-    "Modern Full Stack Development",
-    "Progressive Full Stack Apps",
+    "FastAPI",
+    "PostgreSQL",
+    "Supabase",
     "Nikhil Dhillon",
   ],
   authors: [{ name: "Nikhil Dhillon" }],
   creator: "Nikhil Dhillon",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Nikhil Dhillon - Full Stack Developer Portfolio",
+    title: "Nikhil Dhillon - Software Developer Portfolio",
     description:
-      "Passionate full stack developer crafting modern and engaging digital experiences. Explore my projects and Full Stack development expertise.",
-    url: "https://your-domain.com",
+      "Explore my work across native systems, full-stack products, mobile applications, and data-driven tools.",
+    url: "/",
     siteName: "Nikhil Dhillon - Portfolio",
     images: [
       {
         url: "/Home.png",
         width: 1200,
         height: 630,
-        alt: "Nikhil Dhillon - Full Stack Developer Portfolio",
+        alt: "Nikhil Dhillon - Software Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -54,11 +57,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nikhil Dhillon - Full Stack Developer",
+    title: "Nikhil Dhillon - Software Developer",
     description:
-      "Passionate Full Stack developer crafting modern and engaging digital experiences. Explore my projects and Full Stack development expertise.",
-    creator: "@nikhil_dhillon",
-    images: ["/og-image.jpg"],
+      "Explore my work across native systems, full-stack products, mobile applications, and data-driven tools.",
+    images: ["/Home.png"],
   },
   robots: {
     index: true,
