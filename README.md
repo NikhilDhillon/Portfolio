@@ -1,6 +1,6 @@
 # Nikhil Dhillon — Portfolio
 
-Personal portfolio website for Nikhil Dhillon, a full-stack developer. The site highlights my experience, technical skills, selected projects, resume, and contact information in a responsive, animated interface.
+Hi, I'm Nikhil Dhillon, a full-stack developer and Computer Science Honours student at the University of Victoria. This portfolio highlights my experience, technical skills, selected projects, and resume through a responsive, animated interface.
 
 ![Portfolio home page](./public/Home.png)
 
@@ -26,7 +26,3 @@ Personal portfolio website for Nikhil Dhillon, a full-stack developer. The site 
 - Email: [nikhilpartapsinghd@uvic.ca](mailto:nikhilpartapsinghd@uvic.ca)
 - GitHub: [NikhilDhillon](https://github.com/NikhilDhillon)
 - LinkedIn: [Nikhil Dhillon](https://www.linkedin.com/in/nikhil-dhillon-9747341a5/)
-
-## Author
-
-Built by Nikhil Dhillon.
