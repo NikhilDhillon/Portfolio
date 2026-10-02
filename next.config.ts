@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Local verification can build separately from an already running preview.
+  distDir: process.env.PORTFOLIO_DIST_DIR || ".next",
+  turbopack: { root: process.cwd() },
 };
 
 export default nextConfig;

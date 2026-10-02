@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+.next-dev/
+.next-verify/
+
+# Local design direction, skills, and verification records
+/DESIGN.md
+/.claude/
+/skills-lock.json
+/docs/
+/devportfoliotemplates/
+/.playwright/
+
+# Superseded preview image; the website uses Home.jpg
+/public/Home.png
