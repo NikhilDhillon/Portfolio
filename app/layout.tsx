@@ -39,6 +39,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Nikhil Dhillon" }],
   creator: "Nikhil Dhillon",
+  icons: {
+    icon: [
+      { url: "/favicon.ico?v=nd-1", type: "image/x-icon", sizes: "16x16 32x32 48x48" },
+      { url: "/brand/nd-mark.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico?v=nd-1",
+    apple: [{ url: "/apple-touch-icon.png?v=nd-1", type: "image/png", sizes: "180x180" }],
+  },
   alternates: {
     canonical: "/",
   },

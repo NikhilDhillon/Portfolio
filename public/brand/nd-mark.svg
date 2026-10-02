@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Nikhil Dhillon</title>
+  <rect width="64" height="64" fill="#151618"/>
+  <g fill="none" stroke="#FF4F00" stroke-width="6" stroke-linejoin="miter">
+    <path d="M12 48V16l17 32V16"/>
+    <path d="M39 16h3c9 0 13 6 13 16s-4 16-13 16h-3V16Z"/>
+  </g>
+</svg>
