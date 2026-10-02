@@ -1,182 +1,21 @@
-import React from "react";
+import { profile } from "../data/portfolio";
+import { HandleMeter } from "./HandleMeter";
+import { Arrow } from "./Arrow";
+import { HeroPlane } from "./motion/HeroPlane";
 
-export const HeroSection = () => {
+export function HeroSection() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background Grid */}
-      <div
-        className="absolute inset-0 grid-background opacity-20"
-        aria-hidden="true"
-      >
-        <div className="grid-overlay animate-pulse-slow"></div>
-      </div>
-
-      {/* Floating Tech Icons */}
-      <div
-        className="pointer-events-none absolute inset-0 hidden overflow-hidden sm:block"
-        aria-hidden="true"
-      >
-        {[
-          { icon: "⚛️", delay: "0s", position: "top-20 left-1/4" },
-          { icon: "🚀", delay: "2s", position: "top-[40%] right-1/3" },
-          { icon: "💻", delay: "1s", position: "bottom-32 left-1/3" },
-          { icon: "🔥", delay: "3s", position: "bottom-20 right-1/4" },
-          { icon: "🧠", delay: "1.5s", position: "top-10 right-1/4" },
-          { icon: "🔧", delay: "2.5s", position: "bottom-10 left-[15%]" },
-          { icon: "🌐", delay: "1.8s", position: "top-1/3 left-[10%]" },
-          { icon: "📦", delay: "0.8s", position: "top-1/2 right-[10%]" },
-          { icon: "📱", delay: "2.2s", position: "bottom-1/4 right-1/3" },
-          { icon: "🔒", delay: "0.4s", position: "bottom-1/3 left-1/4" },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className={`absolute ${item.position} animate-float opacity-50`}
-            style={{ animationDelay: item.delay }}
-          >
-            <span className="text-4xl">{item.icon}</span>
-          </div>
-        ))}
-      </div>
-
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4">
-        <div className="text-center space-y-6">
-          {/* Name Section */}
-          <div className="relative inline-block px-4 sm:px-0">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur-xl opacity-75"></div>
-            <h1 className="relative text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300 pb-2">
-              Nikhil Dhillon
-            </h1>
-          </div>
-
-          {/* Role & Description */}
-          <div className="space-y-4 sm:space-y-6 mt-6 sm:mt-8">
-            <div className="flex flex-col items-center gap-4">
-              <div className="flex items-center gap-3">
-                <span className="h-[1px] w-8 sm:w-12 bg-blue-500"></span>
-                <h2 className="text-xl sm:text-2xl font-light tracking-wide text-blue-400">
-                  Software Developer
-                </h2>
-                <span className="h-[1px] w-8 sm:w-12 bg-blue-500"></span>
-              </div>
-              <p className="text-base sm:text-lg text-gray-400 max-w-2xl px-4 sm:px-0">
-                Building reliable systems and practical products across the
-                stack
-              </p>
-            </div>
-
-            {/* Tech Stack Pills */}
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 px-4 sm:px-0">
-              {[
-                "C++",
-                "C#",
-                "Python",
-                "TypeScript",
-                "SQL",
-                "React",
-                "React Native",
-                "Next.js",
-                "FastAPI",
-                ".NET",
-                "MFC",
-                "PostgreSQL",
-                "Supabase",
-                "Docker",
-                "AWS",
-                "Microsoft Azure",
-              ].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 px-4 sm:px-0">
-            <a
-              href="#work"
-              className="group px-6 sm:px-8 py-3 bg-[#161B22] rounded-full inline-flex items-center justify-center w-full sm:w-auto hover:bg-[#21262D] hover:border-glow-purple-500 hover:text-glow-blue-500 transition-colors border border-[#2D333B] hover:border-gray-600"
-            >
-              View My Work
-              <svg
-                className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-            </a>
-
-            <a
-              href="#contact"
-              className="px-6 sm:px-8 py-3 bg-[#21262D] rounded-full hover:bg-[#2D333B] transition-colors border border-[#2D333B] hover:border-gray-600 text-center hover:border-glow-purple-500 hover:text-glow-blue-500"
-            >
-              Get in Touch
-            </a>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
-            {[
-              {
-                name: "GitHub",
-                icon: "🐙",
-                href: "https://github.com/NikhilDhillon",
-              },
-              {
-                name: "LinkedIn",
-                icon: "💼",
-                href: "https://www.linkedin.com/in/nikhil-dhillon-9747341a5/",
-              },
-              // { name: "Twitter", icon: "🐦", href: "#" },
-              // { name: "Blog", icon: "✍️", href: "#" },
-            ].map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
-                aria-label={social.name}
-              >
-                <span className="text-xl sm:text-2xl group-hover:scale-110 transition-transform inline-block">
-                  {social.icon}
-                </span>
-              </a>
-            ))}
-          </div>
+    <section id="top" aria-labelledby="hero-title" className="hero-section shell grid gap-8 pb-12 pt-9 sm:pt-12 lg:grid-cols-12 lg:items-center lg:gap-12 lg:pb-16 lg:pt-16">
+      <HeroPlane plane="copy" className="lg:col-span-7">
+        <p className="label"><span className="block sm:inline">CS Honours, University of Victoria</span><span aria-hidden="true" className="hidden sm:inline"> · </span><span className="sr-only">. </span><span className="block sm:inline">Graduating April 2027</span></p>
+        <h1 id="hero-title" translate="no" className="type-display mt-5 text-[clamp(4rem,1.5rem+9vw,7.5rem)]"><span className="block">Nikhil</span>{" "}<span className="block">Dhillon</span></h1>
+        <p className="mt-6 max-w-[36ch] text-[clamp(1.125rem,1rem+0.45vw,1.375rem)] leading-[1.45]">Software developer building reliable systems and practical products, from C++ desktop apps to full-stack web and mobile.</p>
+        <div className="mt-7 flex flex-wrap gap-3">
+          <a href="#work" className="btn btn-primary">View work<Arrow dir="s" /></a>
+          <a href={profile.resumeHref} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Resume<Arrow dir="ne" /><span className="sr-only">(PDF, opens in a new tab)</span></a>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 inset-x-0 flex flex-col items-center animate-bounce">
-        <span className="text-gray-400 text-sm mb-2 text-center">
-          Scroll to explore
-        </span>
-        <svg
-          className="w-6 h-6 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </div>
-    </div>
+      </HeroPlane>
+      <HeroPlane plane="meter" className="w-full max-w-xl lg:col-span-5 lg:max-w-none"><HandleMeter /></HeroPlane>
+    </section>
   );
-};
+}
