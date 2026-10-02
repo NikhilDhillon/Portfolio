@@ -41,10 +41,11 @@ export const metadata: Metadata = {
   creator: "Nikhil Dhillon",
   icons: {
     icon: [
-      { url: "/favicon.ico?v=nd-1", type: "image/x-icon", sizes: "16x16 32x32 48x48" },
       { url: "/brand/nd-mark.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/brand/nd-mark-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/nd-mark-48.png", type: "image/png", sizes: "48x48" },
     ],
-    shortcut: "/favicon.ico?v=nd-1",
+    shortcut: "/brand/nd-mark-32.png",
     apple: [{ url: "/apple-touch-icon.png?v=nd-1", type: "image/png", sizes: "180x180" }],
   },
   alternates: {
