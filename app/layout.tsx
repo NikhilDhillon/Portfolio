@@ -1,15 +1,19 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "Nikhil Dhillon - Portfolio",
     images: [
       {
-        url: "/Home.png",
+        url: "/Home.jpg",
         width: 1200,
         height: 630,
         alt: "Nikhil Dhillon - Software Developer Portfolio",
@@ -60,7 +64,7 @@ export const metadata: Metadata = {
     title: "Nikhil Dhillon - Software Developer",
     description:
       "Explore my work across native systems, full-stack products, mobile applications, and data-driven tools.",
-    images: ["/Home.png"],
+    images: ["/Home.jpg"],
   },
   robots: {
     index: true,
@@ -75,6 +79,17 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#E7E8E4" },
+    { media: "(prefers-color-scheme: dark)", color: "#141517" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -82,9 +97,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
-      >
+      <body className={`${archivo.variable} ${plexMono.variable} font-sans`}>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
       </body>
     </html>
